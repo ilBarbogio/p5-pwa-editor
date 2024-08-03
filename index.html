@@ -28,11 +28,28 @@
 			}
 		}
 	</script>
+
+	<script src="./scripts/components.js" type="module"></script>
 </head>
 <body>
-	<div id="editor-wrapper"></div>
-	<button id="run-button">Clicca</button>
-	<iframe id="result-iframe"></iframe>
+	<editor-panel code="function setup(){
+	createCanvas(200,200)
+	background(120)
+}"></editor-panel>
+	<result-panel></result-panel>
+	
+
+
+	<template id="ep-template">
+		<div class="display"></div>
+		<button class="button launch"></button>
+		<button class="button stop"></button>
+	</template>
+
+	<template id="rs-template">
+		<iframe></iframe>
+	</template>
+
 
 	<script src="./scripts/script.js" type="module"></script>
 </body>

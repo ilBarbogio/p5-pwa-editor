@@ -1,25 +1,8 @@
-import {EditorView, basicSetup} from "codemirror"
-import {javascript} from "@codemirror/lang-javascript"
+import { codeSnippets } from "./constants.js"
 
-let editor = new EditorView({
-  extensions: [basicSetup, javascript()],
-  parent: document.getElementById("editor-wrapper")
-})
+const editor=document.querySelector("editor-panel")
+const result=document.querySelector("result-panel")
 
-document.getElementById("run-button").addEventListener("click",()=>{
+editor.setAttribute("code",codeSnippets.startingP5)
 
-  let injDoc=`
-    <html>
-    <head>
-      <script src="./node_modules/p5/lib/p5.min.js"></script>
-    </head>
-    <body>
-      <script deferred>
-        ${editor.state.doc.text.join("\n")}
-      </script>
-    </body>
-    </html>
-  `
 
-  document.getElementById("result-iframe").srcdoc=injDoc
-})
