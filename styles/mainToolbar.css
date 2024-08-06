@@ -1,0 +1,9 @@
+:host{
+	position:relative;
+	width:100vw;
+	height:var(--main-toolbar-height);
+	grid-row:1;
+	grid-column:2 span 2;
+
+	background-color: aquamarine;
+}

@@ -1,5 +1,19 @@
 body{
+	--file-panel-contracted-width:3em;
+	--file-panel-expanded-width:16em;
+	--file-panel-width:var(--file-panel-contracted-width);
+	--main-toolbar-height:3em;
+
+	margin:0;
+	padding:0;
+
 	display:grid;
-	grid-template-columns:1fr 1fr;
-	grid-template-rows: auto;
+	grid-template-columns:var(--file-panel-width) 1fr 1fr;
+	grid-template-rows: var(--main-toolbar-height) auto;
+
+	transition: grid-template-columns 1s;
+}
+
+body.files-expanded{
+	--file-panel-width:var(--file-panel-expanded-width);
 }

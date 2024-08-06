@@ -5,11 +5,16 @@ export const paths={
 export const customEvents={
 	launchCode:"launch-code",
 	stopCode:"stop-code",
+	toggleFilePanel:"toggle-files",
 }
 
 export const codeSnippets={
 	startingP5:`function setup(){
 		createCanvas(200,200)
 		background(120)
+	}
+		
+	function draw(){
+		
 	}`
 }

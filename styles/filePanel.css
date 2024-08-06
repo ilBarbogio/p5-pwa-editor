@@ -1,0 +1,28 @@
+:host{
+	grid-row:1;
+	grid-column:1;
+
+	position:fixed;
+	box-sizing: border-box;
+	width:var(--file-panel-width);
+	height:100vh;
+	padding:calc(.1 * var(--file-panel-contracted-width));
+	
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: bisque;
+
+	transition: width 1s;
+}
+.toggle{
+	position:relative;
+	width:calc(.8 * var(--file-panel-contracted-width));
+	height:calc(.8 * var(--file-panel-contracted-width));
+
+	align-self:flex-end;
+	
+	background-color: aquamarine;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
