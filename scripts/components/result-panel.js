@@ -29,10 +29,17 @@ export class ResultPanel extends HTMLElement{
 		})
 	}
 
+
 	createContent(code){
 		let injDoc=`
 	    <html>
 	    <head>
+			<style>
+			body{
+				padding:0;
+				margin:0;
+			}
+			</style>
 	      <script src=${paths.p5FromIframe}></script>
 	    </head>
 	    <body>

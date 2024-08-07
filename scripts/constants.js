@@ -6,6 +6,8 @@ export const customEvents={
 	launchCode:"launch-code",
 	stopCode:"stop-code",
 	toggleFilePanel:"toggle-files",
+	saveCode:"save-code",
+	loadCode:"load-code",
 }
 
 export const codeSnippets={

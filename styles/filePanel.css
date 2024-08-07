@@ -26,3 +26,16 @@
 	border: 1px solid gray;
 	border-radius: 50%;
 }
+.btn{
+	display: inline-block;
+	width:var(--file-panel-contracted-width);
+	height:var(--file-panel-contracted-width);
+	border-radius: 50%;
+	border:1px solid gray;
+}
+.btn.save{
+	background-color: azure;
+}
+.btn.load{
+	background-color: blanchedalmond;
+}

@@ -6,7 +6,7 @@ export class MainToolbar extends HTMLElement{
 	constructor(){
 		super()
 
-		const template=document.getElementById('fs-template')
+		const template=document.getElementById('tb-template')
     const templateContent=template.content
 
     this.attachShadow({ mode: 'open' }).appendChild(

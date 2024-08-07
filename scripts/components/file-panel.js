@@ -25,6 +25,18 @@ export class FilePanel extends HTMLElement{
 			let event=new CustomEvent(customEvents.toggleFilePanel)
 			window.dispatchEvent(event)
 		})
+
+		this.save=this.shadowRoot.querySelector(".save")
+		this.save.addEventListener("click",()=>{
+			let event=new CustomEvent(customEvents.saveCode)
+			window.dispatchEvent(event)
+		})
+
+		this.load=this.shadowRoot.querySelector(".load")
+		this.load.addEventListener("click",()=>{
+			let event=new CustomEvent(customEvents.loadCode)
+			window.dispatchEvent(event)
+		})
 		
 	}
 
