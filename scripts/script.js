@@ -15,7 +15,6 @@ window.addEventListener(customEvents.toggleFilePanel,()=>{
 currentState.fileWorker=new Worker("./scripts/workers/fs.js")
 
 
-
 window.addEventListener(customEvents.projectsLoaded,(ev)=>{
 	console.log(currentState.projects,ev.detail)
 })
@@ -38,4 +37,4 @@ setTimeout(()=>{
 		}
 	)
 	window.dispatchEvent(ev)
-},1000)
+},500)

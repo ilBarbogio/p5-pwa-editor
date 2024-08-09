@@ -38,6 +38,17 @@ export class EditorPanel extends HTMLElement{
 			doc:this.code
 		})
 
+		// const Theme = EditorView.theme({
+		// 	"&": {
+		// 		fontFamily:"inherit !important",
+		// 		fontSize:"inherit"
+		// 		// fontFamily:"RobotoMono,monospace",
+		// 		// fontSize: "18px",
+		// 	},
+		// 	"cm-scroller":{
+		// 		fontFamily:"RobotoMono !important"
+		// 	}
+		// });
 	}
 
 	attributeChangedCallback(name,oldValue,newValue){

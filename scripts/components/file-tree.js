@@ -6,11 +6,15 @@ export class FileTree extends HTMLElement{
 	constructor(){
 		super()
 
-		this.attachShadow({ mode: 'open' })
+		const template=document.getElementById('tr-template')
+    const templateContent=template.content
 
-		this.container=document.createElement("div")
-		this.container.classList.add("container")
-		this.shadowRoot.append(this.container)
+    this.attachShadow({ mode: 'open' }).appendChild(
+      templateContent.cloneNode(true)
+    )
+
+		this.toolbar=this.shadowRoot.querySelector(".toolbar")
+		this.container=this.shadowRoot.querySelector(".container")
 		
 		const style=document.createElement('style')
 		style.textContent=`@import url("./styles/fileTree.css")`

@@ -42,18 +42,20 @@
 }"></editor-panel>
 	<result-panel></result-panel>
 	
+	<template id="tr-template">
+		<div class="toolbar">
+			<span class="label">Select a project</span>
+			<button class="btn folder">d</button>
+			<button class="btn file">f</button>
+		</div>
+		<div class="container"></div>
+	</template>
 
 	<template id="tb-template">
 	</template>
 
 	<template id="fs-template">
 		<button class="toggle"></button>
-
-		<div class="header-row">
-			<span class="label">Select a project</span>
-			<button class="btn folder">d</button>
-			<button class="btn file">f</button>
-		</div>
 
 		<div class="panel project-list"></div>
 		<file-tree></file-tree>

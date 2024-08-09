@@ -24,21 +24,39 @@
   height:var(--line-height);
 }
 
-.container .folder,
-.container .file{
+.container .folder{
   padding-left:1em;
 }
-.container .label{
-  line-height: var(--line-height);
-  white-space: nowrap;
-  text-decoration: underline;
-}
 .container .file{
-  line-height: var(--line-height);
-  white-space: nowrap;
+  padding-left:.5em;
 }
 .container > .root > .folder,
 .container > .root > .file{
   padding-left:0;
 }
+
+.container .label{
+  line-height: var(--line-height);
+  white-space: nowrap;
+}
+.container .label:before{
+  content:"\0276F";
+  margin-left:.25em;
+  margin-right:.5em;
+  display: inline-block;
+  transform: rotate(90deg);
+  transition:.15s transform;
+}
+.container .folder.closed > .label:before{
+  content:"\0276F";
+  display: inline-block;
+  transform: rotate(0);
+}
+
+
+.container .file{
+  line-height: var(--line-height);
+  white-space: nowrap;
+}
+
 

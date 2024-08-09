@@ -1,9 +1,15 @@
+@font-face {
+  font-family: RobotoMono;
+  src: url("../assets/RobotoMono-VariableFont_wght.ttf");
+}
 body{
 	--file-panel-contracted-width:3em;
 	--file-panel-expanded-width:16em;
 	--file-panel-width:var(--file-panel-contracted-width);
 	--main-toolbar-height:3em;
 
+	font-family: RobotoMono;
+	font-size: medium;
 	margin:0;
 	padding:0;
 
