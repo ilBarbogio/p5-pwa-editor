@@ -1,0 +1,44 @@
+:host{
+  display:block;
+  width:var(--file-panel-expanded-width);
+  height:fit-content;
+  overflow:hidden;
+  padding:.5em;
+  background-color: azure;
+}
+
+.container{
+  --line-height:1em;
+}
+.container div:not(.root, .folder):hover{
+  background-color: white;
+}
+.container > .root{
+  padding-left:.5em;
+}
+
+.container .folder{
+  overflow: hidden;
+}
+.container .folder.closed{
+  height:var(--line-height);
+}
+
+.container .folder,
+.container .file{
+  padding-left:1em;
+}
+.container .label{
+  line-height: var(--line-height);
+  white-space: nowrap;
+  text-decoration: underline;
+}
+.container .file{
+  line-height: var(--line-height);
+  white-space: nowrap;
+}
+.container > .root > .folder,
+.container > .root > .file{
+  padding-left:0;
+}
+

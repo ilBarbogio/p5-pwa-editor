@@ -1,4 +1,5 @@
 import { customEvents } from "../constants.js"
+import { currentState } from "../state.js"
 
 export class FilePanel extends HTMLElement{
 	// static observedAttributes=["code"]
@@ -17,6 +18,8 @@ export class FilePanel extends HTMLElement{
 		style.textContent=`@import url("./styles/filePanel.css")`
 		this.shadowRoot.append(style)
 
+		//fields
+		this.selectedProject=undefined
 	}
 
 	connectedCallback(){
@@ -26,19 +29,9 @@ export class FilePanel extends HTMLElement{
 			window.dispatchEvent(event)
 		})
 
-		this.save=this.shadowRoot.querySelector(".save")
-		this.save.addEventListener("click",()=>{
-			let event=new CustomEvent(customEvents.saveCode)
-			window.dispatchEvent(event)
-		})
-
-		this.load=this.shadowRoot.querySelector(".load")
-		this.load.addEventListener("click",()=>{
-			let event=new CustomEvent(customEvents.loadCode)
-			window.dispatchEvent(event)
-		})
 		
 	}
+
 
 	// attributeChangedCallback(name,oldValue,newValue){
 	// 	console.log(name,oldValue,newValue)

@@ -41,7 +41,6 @@ export class EditorPanel extends HTMLElement{
 	}
 
 	attributeChangedCallback(name,oldValue,newValue){
-		console.log(name,oldValue,newValue)
 		switch(name){
 			case "code":
 				this.code=newValue
@@ -103,7 +102,6 @@ export class EditorPanel extends HTMLElement{
 	loadCode=()=>{
 		if(this.editor){
 			let code=localStorage.getItem("code")
-			console.log(code)
 			if(code){
 				this.code=code
 				this.editor.dispatch({changes: {

@@ -31,7 +31,7 @@
 
 	<script src="./scripts/components.js" type="module"></script>
 </head>
-<body>
+<body class="files-expanded">
 	<main-toolbar></main-toolbar>
 
 	<file-panel></file-panel>
@@ -48,8 +48,16 @@
 
 	<template id="fs-template">
 		<button class="toggle"></button>
-		<button class="btn save"></button>
-		<button class="btn load"></button>
+
+		<div class="header-row">
+			<span class="label">Select a project</span>
+			<button class="btn folder">d</button>
+			<button class="btn file">f</button>
+		</div>
+
+		<div class="panel project-list"></div>
+		<file-tree></file-tree>
+
 	</template>
 
 	<template id="ep-template">
